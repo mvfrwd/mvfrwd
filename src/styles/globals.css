@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-syne: var(--font-syne);
+  --font-space-mono: var(--font-space-mono);
+  --font-plus-jakarta: var(--font-plus-jakarta);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
