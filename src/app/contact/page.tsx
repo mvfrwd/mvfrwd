@@ -85,8 +85,8 @@ export default function ContactPage() {
           />
           <p className="text-xs font-mono text-brand-muted">
             DIRECT INQUIRIES: <br />
-            <a href="mailto:hello@mvfrwd.co" className="text-brand-off-white hover:text-brand-orange font-bold transition-colors">
-              hello@mvfrwd.co
+            <a href="mailto:mvfrwdco@gmail.com" className="text-brand-off-white hover:text-brand-orange font-bold transition-colors">
+              mvfrwdco@gmail.com
             </a>
           </p>
         </div>
