@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { VisitorCounter } from './VisitorCounter';
 
 export const Footer: React.FC = () => {
   return (
@@ -41,13 +42,16 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="border-t border-brand-off-white/5 pt-6 flex flex-col md:flex-row justify-between items-center text-[10px] font-mono text-brand-muted">
+      <div className="border-t border-brand-off-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono text-brand-muted">
         <p>© 2026 mvfrwd. All rights reserved.</p>
-        <div className="flex space-x-4 mt-2 md:mt-0">
+
+        {/* Total Visits Counter */}
+        <VisitorCounter />
+
+        <div className="flex space-x-4">
           <Link href="/privacy-policy" className="hover:text-brand-off-white transition-colors">Privacy Policy</Link>
           <Link href="/terms-and-conditions" className="hover:text-brand-off-white transition-colors">Terms & Conditions</Link>
         </div>
-      </div>
     </footer>
   );
 };
