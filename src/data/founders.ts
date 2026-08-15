@@ -30,7 +30,7 @@ export const FOUNDERS_DATA: Founder[] = [
     quote: "The goal isn't to follow the path. It's to create the next one.",
     bio: "Founder & Managing Director at mvfrwd., shaping the vision and direction behind the move.",
     about: "Aditya focuses on shaping the vision, strategy, and direction of the brand. He brings together ideas, people, and opportunities to turn ambitions into meaningful action. For him, mvfrwd. is about more than building a digital agency — it's about creating a team that thinks differently, builds boldly, and keeps moving forward.",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/adiittya",
     instagram: "https://www.instagram.com/adiitya.6/"
   },
   {
@@ -41,7 +41,7 @@ export const FOUNDERS_DATA: Founder[] = [
     quote: "Design shouldn't just explain what a company does. It should show where it's going.",
     bio: "Marketing Director at mvfrwd., turning ideas into strategies that help brands move forward.",
     about: "Tirth leads the marketing direction at mvfrwd., focusing on strategy, communication, and building meaningful connections between brands and their audiences. He brings ideas to the market and turns attention into momentum.",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/tirth-darji-4b38a8350/",
     instagram: "https://www.instagram.com/tirthdarji12/"
   },
   {
@@ -52,7 +52,7 @@ export const FOUNDERS_DATA: Founder[] = [
     quote: "Dwell on the beauty of life. Watch the stars, and see yourself running with them.",
     bio: "Web Developer at mvfrwd., building digital experiences designed to move brands forward.",
     about: "Kush focuses on turning ideas into functional, engaging web experiences. From bringing designs to life to building the technology behind them, he helps shape the digital side of mvfrwd. with a focus on performance, usability, and creativity.",
-    linkedin: "https://in.linkedin.com/in/kush-patel-aa4670207",
+    linkedin: "https://www.linkedin.com/in/kush-patel-aa4670207",
     instagram: "https://www.instagram.com/_kushpatel19.__/"
   },
   {
@@ -63,7 +63,7 @@ export const FOUNDERS_DATA: Founder[] = [
     quote: "Every move starts with the courage to take the first step.",
     bio: "Proprietor at mvfrwd., helping turn ideas into a growing digital brand.",
     about: "Saniya is the Proprietor of mvfrwd., helping provide the foundation for the team’s vision, ideas, and ambitions to grow into something real.",
-    linkedin: "https://linkedin.com",
-    instagram: "https://instagram.com"
+    linkedin: "https://www.linkedin.com/in/saniya-gupta-776262319/",
+    instagram: "https://www.instagram.com/saniyagupta_5/"
   }
 ];
