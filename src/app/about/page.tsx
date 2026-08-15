@@ -1,8 +1,7 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { Metadata } from 'next';
 import {
   ABOUT_PRINCIPLES,
   THINKING_COLUMNS,
@@ -10,7 +9,6 @@ import {
   CULTURE_POINTS
 } from '@/data/siteContent';
 import { FounderSection } from '@/components/sections/FounderSection';
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About mvfrwd. — The Team Behind the Move',
@@ -26,7 +24,7 @@ export default function AboutPage() {
     <main className="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col gap-28">
       {/* 1. HERO */}
       <section className="flex flex-col gap-6">
-        <span className="text-xs font-mono text-brand-orange tracking-widest">ABOUT MVFRWD.</span>
+        <span className="text-xs font-mono text-brand-orange tracking-widest uppercase">ABOUT MVFRWD.</span>
         <h1 className="font-display text-5xl md:text-8xl font-extrabold text-brand-off-white leading-[0.95]">
           WE'RE MOVING <br />
           <span className="text-brand-orange">FORWARD.</span>
@@ -38,7 +36,7 @@ export default function AboutPage() {
 
       {/* 2. OUR STORY */}
       <section className="border-t border-brand-off-white/10 pt-16 flex flex-col gap-8">
-        <span className="text-xs font-mono text-brand-orange tracking-widest">01 // OUR STORY</span>
+        <span className="text-xs font-mono text-brand-orange tracking-widest uppercase">01 // OUR STORY</span>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <h2 className="lg:col-span-6 font-display text-3xl md:text-5xl font-extrabold text-brand-off-white">
             EVERYTHING STARTS WITH A FIRST MOVE.
@@ -60,7 +58,7 @@ export default function AboutPage() {
       {/* 3. WHY WE STARTED */}
       <section className="border-t border-brand-off-white/10 pt-16 flex flex-col gap-12">
         <div className="flex flex-col gap-2">
-          <span className="text-xs font-mono text-brand-orange tracking-widest">02 // WHY MVFRWD.</span>
+          <span className="text-xs font-mono text-brand-orange tracking-widest uppercase">02 // WHY MVFRWD.</span>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-brand-off-white">
             NO MORE ISOLATED SILOS.
           </h2>
@@ -86,7 +84,7 @@ export default function AboutPage() {
 
       {/* 4. WHAT WE BELIEVE */}
       <section className="border-t border-brand-off-white/10 pt-16 flex flex-col gap-12">
-        <span className="text-xs font-mono text-brand-orange tracking-widest">03 // WHAT WE BELIEVE</span>
+        <span className="text-xs font-mono text-brand-orange tracking-widest uppercase">03 // WHAT WE BELIEVE</span>
         <div className="flex flex-col divide-y divide-brand-off-white/10">
           {ABOUT_PRINCIPLES.map((principle) => (
             <div key={principle.number} className="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
@@ -104,7 +102,7 @@ export default function AboutPage() {
 
       {/* 5. HOW WE THINK */}
       <section className="border-t border-brand-off-white/10 pt-16 flex flex-col gap-12">
-        <span className="text-xs font-mono text-brand-orange tracking-widest">04 // HOW WE THINK</span>
+        <span className="text-xs font-mono text-brand-orange tracking-widest uppercase">04 // HOW WE THINK</span>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {THINKING_COLUMNS.map((item) => (
             <div key={item.category} className="border border-brand-off-white/10 bg-brand-near-black p-8 rounded-2xl flex flex-col justify-between min-h-[220px]">
@@ -118,7 +116,7 @@ export default function AboutPage() {
       {/* 6. OUR JOURNEY */}
       <section className="border-t border-brand-off-white/10 pt-16 flex flex-col gap-12">
         <div className="flex flex-col gap-2">
-          <span className="text-xs font-mono text-brand-orange tracking-widest">05 // OUR JOURNEY</span>
+          <span className="text-xs font-mono text-brand-orange tracking-widest uppercase">05 // OUR JOURNEY</span>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-brand-off-white">
             THE JOURNEY STARTS NOW.
           </h2>
@@ -135,12 +133,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 7. NEW FOUNDER SECTION ADDITION */}
+      {/* 7. FOUNDER SECTION */}
       <FounderSection />
 
-      {/* 8. CULTURE / HOW WE WORK */}
+      {/* 8. CULTURE */}
       <section className="border-t border-brand-off-white/10 pt-16 flex flex-col gap-8">
-        <span className="text-xs font-mono text-brand-orange tracking-widest">07 // HOW WE WORK</span>
+        <span className="text-xs font-mono text-brand-orange tracking-widest uppercase">07 // HOW WE WORK</span>
         <div className="flex flex-wrap gap-4">
           {CULTURE_POINTS.map((point, idx) => (
             <span key={idx} className="font-display text-2xl md:text-4xl font-extrabold text-brand-off-white border border-brand-off-white/10 bg-brand-near-black px-6 py-4 rounded-2xl">
@@ -150,7 +148,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 9. CONTINUOUS SECTION END & FINAL CTA */}
+      {/* 9. FINAL CTA */}
       <section className="border-t border-brand-off-white/10 pt-16 text-center flex flex-col items-center gap-6 relative">
         <div className="flex items-center space-x-3 mb-2">
           <span className="h-px w-8 bg-brand-orange" />
