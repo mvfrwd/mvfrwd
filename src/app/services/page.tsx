@@ -1,9 +1,13 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Services | mvfrwd.',
-  description: 'Explore mvfrwd. capabilities in web development, SEO, digital marketing, branding and creative, and AI and automation.',
+  title: 'Digital Marketing & Web Development Services | mvfrwd.',
+  description: 'Explore mvfrwd. capabilities across web development, search engine optimization (SEO), digital marketing, branding systems, and AI-driven automation.',
+  alternates: {
+    canonical: 'https://mvfrwd.vercel.app/services',
+  },
 };
+
 
 export default function ServicesPage() {
   return (

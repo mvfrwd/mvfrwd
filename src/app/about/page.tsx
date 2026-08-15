@@ -10,6 +10,16 @@ import {
   CULTURE_POINTS
 } from '@/data/siteContent';
 import { FounderSection } from '@/components/sections/FounderSection';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About mvfrwd. — The Team Behind the Move',
+  description:
+    'Meet the team behind mvfrwd. — a technology-driven digital agency founded by builders bringing together web engineering, marketing, and creative strategy.',
+  alternates: {
+    canonical: 'https://mvfrwd.vercel.app/about',
+  },
+};
 
 export default function AboutPage() {
   return (

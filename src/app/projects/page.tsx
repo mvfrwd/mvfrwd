@@ -3,6 +3,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { ForwardLine } from '@/components/ui/ForwardLine';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Projects & Digital Work | mvfrwd.',
+  description:
+    "We are building our client portfolio from the ground up. Explore Project 001 reserved for our first agency collaboration.",
+  alternates: {
+    canonical: 'https://mvfrwd.co/projects',
+  },
+};
 
 export default function ProjectsPage() {
   return (

@@ -1,34 +1,51 @@
-export default function sitemap() {
+import { MetadataRoute } from 'next';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://mvfrwd.vercel.app/';
+  const currentDate = new Date().toISOString();
+
   return [
     {
-      url: 'https://mvfrwd.com',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
+      url: `${baseUrl}`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
     },
     {
-      url: 'https://mvfrwd.com/about',
-      lastModified: new Date(),
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://mvfrwd.com/services',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://mvfrwd.com/projects',
-      lastModified: new Date(),
+      url: `${baseUrl}/services`,
+      lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://mvfrwd.com/contact',
-      lastModified: new Date(),
+      url: `${baseUrl}/projects`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms-and-conditions`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
   ];
 }

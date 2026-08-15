@@ -5,7 +5,17 @@ import { ServicesInteractiveSection } from '@/components/sections/ServicesIntera
 import { TechCreativitySection } from '@/components/sections/TechCreativitySection';
 import { ProcessTimelineSection } from '@/components/sections/ProcessTimelineSection';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { ArrowUpRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'mvfrwd. — Digital Marketing & Web Development Agency',
+  description:
+    'mvfrwd. is a digital agency helping ambitious brands move forward through web development, digital marketing, SEO, branding, and creative digital solutions.',
+  alternates: {
+    canonical: 'https://mvfrwd.vercel.app',
+  },
+};
 
 export default function HomePage() {
   return (

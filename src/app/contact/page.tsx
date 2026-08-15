@@ -2,6 +2,16 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact mvfrwd. — Let's Move Your Brand Forward",
+  description:
+    'Ready to initiate your next project? Get in touch with mvfrwd. to build your website, expand your digital marketing, or elevate your brand.',
+  alternates: {
+    canonical: 'https://mvfrwd.co/contact',
+  },
+};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
