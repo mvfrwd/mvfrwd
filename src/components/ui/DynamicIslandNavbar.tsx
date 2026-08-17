@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { name: 'ABOUT', path: '/about' },
   { name: 'SERVICES', path: '/services' },
   { name: 'PROJECTS', path: '/projects' },
+  { name: 'PLAYGROUND', path: '/playground' },
   { name: 'CONTACT', path: '/contact' },
 ];
 
@@ -31,10 +32,10 @@ export const DynamicIslandNavbar: React.FC = () => {
       <motion.nav
         layout
         transition={{ type: 'spring', stiffness: 350, damping: 35 }}
-        className={`pointer-events-auto relative flex items-center justify-between rounded-full border border-brand-off-white/10 bg-brand-near-black/90 backdrop-blur-xl overflow-hidden transition-all duration-300 ${
+        className={`pointer-events-auto relative flex items-center justify-between rounded-full border border-brand-off-white/10 bg-brand-near-black/90 backdrop-blur-xl transition-all duration-300 ${
           isScrolled 
-            ? 'w-full max-w-2xl px-4 py-1.5 shadow-2xl shadow-black/80' 
-            : 'w-full max-w-4xl px-5 py-2.5'
+            ? 'w-full max-w-3xl px-4 py-1.5 shadow-2xl shadow-black/80' 
+            : 'w-full max-w-5xl px-5 py-2.5'
         }`}
       >
         {/* Primary Logo */}
@@ -50,15 +51,19 @@ export const DynamicIslandNavbar: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center space-x-0.5">
+        <div className="hidden md:flex items-center space-x-1">
           {NAV_ITEMS.map((item) => {
-            const isActive = pathname === item.path;
+            const isActive =
+              item.path === '/'
+                ? pathname === '/'
+                : pathname.startsWith(item.path);
+
             return (
               <Link
                 key={item.path}
                 href={item.path}
                 className={`relative px-3 py-1.5 text-[10px] lg:text-[11px] font-mono tracking-wider transition-colors duration-200 ${
-                  isActive ? 'text-brand-off-white' : 'text-brand-muted hover:text-brand-off-white'
+                  isActive ? 'text-brand-off-white font-bold' : 'text-brand-muted hover:text-brand-off-white'
                 }`}
               >
                 {isActive && (
@@ -75,10 +80,10 @@ export const DynamicIslandNavbar: React.FC = () => {
         </div>
 
         {/* Desktop Direct CTA Button */}
-        <div className="hidden md:block shrink-0">
+        <div className="hidden md:block shrink-0 pl-2">
           <Link
             href="/contact"
-            className="group relative flex items-center space-x-1 overflow-hidden rounded-full border border-brand-orange bg-brand-orange/10 px-3.5 py-1.5 text-[10px] lg:text-[11px] font-mono font-bold text-brand-off-white transition-all duration-300 hover:bg-brand-orange hover:text-white"
+            className="group relative flex items-center space-x-1.5 overflow-hidden rounded-full border border-brand-orange bg-brand-orange/10 px-4 py-1.5 text-[10px] lg:text-[11px] font-mono font-bold text-brand-off-white transition-all duration-300 hover:bg-brand-orange hover:text-white"
           >
             <span>INITIATE</span>
             <ArrowUpRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -105,18 +110,25 @@ export const DynamicIslandNavbar: React.FC = () => {
             className="pointer-events-auto absolute top-16 inset-x-4 rounded-3xl border border-brand-off-white/10 bg-brand-near-black/95 backdrop-blur-2xl p-6 shadow-2xl md:hidden"
           >
             <div className="flex flex-col space-y-4">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  onClick={() => setMobileOpen(false)}
-                  className={`text-sm font-mono tracking-widest ${
-                    pathname === item.path ? 'text-brand-orange font-bold' : 'text-brand-off-white'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const isActive =
+                  item.path === '/'
+                    ? pathname === '/'
+                    : pathname.startsWith(item.path);
+
+                return (
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    onClick={() => setMobileOpen(false)}
+                    className={`text-sm font-mono tracking-widest ${
+                      isActive ? 'text-brand-orange font-bold' : 'text-brand-off-white'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
               <div className="pt-4 border-t border-brand-off-white/10">
                 <Link
                   href="/contact"

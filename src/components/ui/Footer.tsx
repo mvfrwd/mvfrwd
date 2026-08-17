@@ -29,6 +29,7 @@ export const Footer: React.FC = () => {
           <Link href="/about" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">About</Link>
           <Link href="/services" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">Services</Link>
           <Link href="/projects" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">Projects</Link>
+          <Link href="/playground" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">Playground</Link>
           <Link href="/contact" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">Contact</Link>
         </div>
 
@@ -36,13 +37,13 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col gap-2">
           <span className="text-[11px] font-mono text-brand-off-white font-bold mb-2 tracking-wider uppercase">CONNECT</span>
           <a href="https://instagram.com/mvfrwd.co" target="_blank" rel="noreferrer" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">Instagram</a>
-          <a href="https://linkedin.com/company/mvfrwd" target="_blank" rel="noreferrer" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">LinkedIn</a>
+          <a href="https://linkedin.com/company/mvfrwdco" target="_blank" rel="noreferrer" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">LinkedIn</a>
           <a href="https://github.com/mvfrwdco" target="_blank" rel="noreferrer" className="text-xs text-brand-muted hover:text-brand-orange transition-colors">GitHub</a>
-          <a href="mailto:hello@mvfrwd.co" className="text-xs text-brand-orange font-mono font-bold mt-2">mvfrwdco@gmail.com</a>
+          <a href="mailto:mvfrwdco@gmail.com" className="text-xs text-brand-orange font-mono font-bold mt-2">mvfrwdco@gmail.com</a>
         </div>
       </div>
 
-      {/* Bottom Row */}
+      {/* Bottom Row with Metadata, Visitor Counter, and Legal Links */}
       <div className="border-t border-brand-off-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono text-brand-muted">
         <p>© 2026 mvfrwd. All rights reserved.</p>
 
