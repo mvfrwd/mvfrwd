@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight, CheckCircle2, Code2, Sparkles, Layers } from 'lucide-react';
 import { PlaygroundProject } from '@/data/playground';
+import Image from 'next/image';
 
 interface DemoDetailClientProps {
   project: PlaygroundProject;
@@ -120,7 +121,57 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ project }) =
             ))}
           </ul>
         </div>
+        
+        {/* Interactive Live Browser Frame or Screenshot */}
+        <section className="w-full rounded-3xl border border-brand-off-white/10 bg-brand-near-black/90 overflow-hidden shadow-2xl">
+          {/* Browser Header Bar */}
+          <div className="flex items-center justify-between border-b border-brand-off-white/10 px-6 py-4 bg-brand-black">
+            <div className="flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+              <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+              <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+            </div>
+            <span className="text-xs font-mono text-brand-muted">
+              {project.liveUrl || `https://mvfrwd.co/demo/${project.slug}`}
+            </span>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[10px] font-mono text-brand-orange hover:underline flex items-center space-x-1"
+              >
+                <span>OPEN NEW TAB</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            )}
+          </div>
 
+          {/* Display Interactive iframe if liveUrl exists, or high-res Image */}
+          <div className="relative w-full aspect-[16/10] bg-black">
+            {project.liveUrl ? (
+              <iframe
+                src={project.liveUrl}
+                title={`${project.name} live demo`}
+                className="w-full h-full border-0"
+                loading="lazy"
+              />
+            ) : project.image ? (
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                className="object-cover object-top"
+              />
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center text-center p-8">
+                <span className="font-display text-4xl font-bold text-brand-off-white mb-2">{project.name}</span>
+                <span className="text-xs font-mono text-brand-muted">CONCEPT PREVIEW COMING SOON</span>
+              </div>
+            )}
+          </div>
+        </section>
+        
         {/* Technical Approach */}
         <div className="border border-brand-off-white/10 bg-brand-near-black/50 p-8 rounded-2xl flex flex-col gap-4">
           <div className="flex items-center space-x-2 text-brand-orange font-mono text-xs font-bold">

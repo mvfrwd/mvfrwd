@@ -29,12 +29,12 @@ export function generateMetadata({ params }: PageProps): Metadata {
     title: `${project.name} (${project.badge}) — Demo Concept | mvfrwd.`,
     description: project.description,
     alternates: {
-      canonical: `https://mvfrwd.co/playground/${project.slug}`,
+      canonical: `https://mvfrwd.vercel.app/playground/${project.slug}`,
     },
     openGraph: {
       title: `${project.name} // Concept Prototype`,
       description: project.description,
-      url: `https://mvfrwd.co/playground/${project.slug}`,
+      url: `https://mvfrwd.vercel.app/playground/${project.slug}`,
       type: 'article',
     },
   };

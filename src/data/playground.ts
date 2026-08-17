@@ -16,7 +16,9 @@ export interface PlaygroundProject {
   description: string;
   tagline: string;
   status: 'CONCEPT' | 'IN DEVELOPMENT' | 'LIVE DEMO';
-  liveUrl?: string; // Set this when an external URL or live sandbox exists
+  liveUrl?: string;
+  image?: string;
+  embedLive?: boolean;
   accentColor?: string;
   theIdea: string;
   designDirection: string[];
@@ -65,15 +67,17 @@ export const PLAYGROUND_PROJECTS: PlaygroundProject[] = [
     ],
   },
   {
-    slug: 'buildflow',
+    slug: 'devrmc',
     badge: 'CONCEPT 002',
-    name: 'BUILDFLOW',
+    name: 'Dev RMC',
     category: 'BUSINESS',
     industry: 'Construction / Infrastructure',
-    tagline: 'A professional digital presence designed for a modern construction and infrastructure company.',
+    tagline: 'A professional digital presence designed for a ready mix concreate company.',
     description:
-      'BUILDFLOW is a high-trust digital platform engineered to present multi-million dollar engineering projects, technical equipment fleets, and structured client bidding pipelines.',
-    status: 'IN DEVELOPMENT',
+      'Dev RMC is a high-trust digital platform engineered to present multi-million dollar engineering projects, technical equipment fleets, and structured client bidding pipelines.',
+    status: 'LIVE DEMO',
+    embedLive: true,
+    liveUrl: 'https://demodev-ready-mix-concrete.vercel.app/',
     theIdea:
       'Industrial and infrastructure companies often suffer from outdated, unorganized websites. BUILDFLOW demonstrates how clean architectural layouts and structured case studies establish immediate credibility with institutional partners.',
     designDirection: [
